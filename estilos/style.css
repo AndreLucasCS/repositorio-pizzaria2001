@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@1,9..40&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+
+#pizza-img {
+    width: 55vw;
+    aspect-ratio: 1/1;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%,50%);
+    
+    transition: transform 0.8s ease-in-out;
+
+}
+
+#logo {
+    width: 25vw;
+    left: 38vw;
+    top: 13vh;
+}
+
+#mensagem-inicio {
+    font-size: 8px;
+    font-family: "DM Sans", sans-serif;
+    top: 100vh;
+    transform: translate(15px, -37px);
+}
