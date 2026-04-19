@@ -28,6 +28,8 @@ function adaptarElementos() {
     } else {
         pizza.style.width = "55vw";
         logo.style.width = "25vw";
+        logo.style.left = "";
+        mensagem.style.fontSize = "";
     } 
 
     // Variáveis de cálculo:
