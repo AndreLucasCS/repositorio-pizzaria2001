@@ -5,6 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#pizza-img,
+#logo,
+#mensagem-inicio,
+#linha {
     position: fixed;
 }
 
