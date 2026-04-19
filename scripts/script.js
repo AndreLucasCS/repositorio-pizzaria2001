@@ -34,6 +34,7 @@ function adaptarElementos() {
     let cicunferencia = pizza.getBoundingClientRect();
     let quadrilatero = mensagem.getBoundingClientRect();
 
+    // Calculando a altura da mensagem em relação ao perímetro da circunferencia usando teorema de pitágora ("raio" = hiportenusa / "d" e "altura" = catetos)
     let raio = (cicunferencia.width / 2) + 30;
     let d = (cicunferencia.left + raio) - (quadrilatero.width + 15);
     let altura = Math.round(Math.sqrt(Math.pow(raio, 2) - Math.pow(d, 2)));
@@ -77,6 +78,14 @@ let imagens = [
     "../arquivos/imagens/pizzas/pizzaQuatroQueijo.png",
     "../arquivos/imagens/pizzas/pizzaBananaCanela.png"
 ];
+let imagensPages = [
+    "/repositorio-pizzaria2001/arquivos/imagens/pizzas/pizzaCalabreza.png",
+    "/repositorio-pizzaria2001/arquivos/imagens/pizzas/pizzaCarne.png",
+    "/repositorio-pizzaria2001/arquivos/imagens/pizzas/pizzaFrangoCatupiry.png",
+    "/repositorio-pizzaria2001/arquivos/imagens/pizzas/pizzaPortuguesa.png",
+    "/repositorio-pizzaria2001/arquivos/imagens/pizzas/pizzaQuatroQueijo.png",
+    "/repositorio-pizzaria2001/arquivos/imagens/pizzas/pizzaBananaCanela.png"
+];
 
 
 let alturaMensagem;
@@ -97,6 +106,9 @@ function trocarPizza() {
         setTimeout(() => {
 
             pizza.src = imagens[sabor];
+            pizza.onerror = function () {
+            pizza.src = imagensPages[sabor];
+            };
             sabor++;
 
             if (sabor >= imagens.length) {
